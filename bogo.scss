@@ -1,0 +1,297 @@
+$bogo-pink: #ff6b82;
+
+$light-pink: #ffe6f0;
+$text-gray: #555;
+$border-color: #f3b7cf;
+
+body {
+  font-family: "Arial", sans-serif;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.bogo-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 343px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff6b82;
+    font-size: 20px;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 0.9px;
+      background: #c8c8c8;
+    }
+  }
+
+  .bogo-option {
+    display: block;
+    margin: 20px 0;
+    cursor: pointer;
+
+    input {
+      margin: 0;
+      margin-right: 12.77px;
+    }
+    input[type="radio"]:checked {
+      accent-color: #ff6b82;
+    }
+
+    .bogo-card {
+      display: flex;
+      justify-content: space-between;
+      border: 0.9px solid #c8c8c8;
+
+      padding: 30px 21.69px;
+      position: relative;
+      transition: border-color 0.3s;
+    }
+
+    input:checked + .bogo-card {
+      border-color: $bogo-pink;
+      background: $light-pink;
+    }
+
+    .offer-badge {
+      background: $bogo-pink;
+      color: #fff;
+      padding: 1px 6px 1px 5px;
+
+      display: inline-block;
+      border-radius: 1px;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      margin-left: 10.77px;
+    }
+
+    .bogo-details {
+      text-align: left;
+      font-size: 14px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      .bogo-details-offer {
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #000;
+      }
+      p {
+        margin: 0;
+        margin-top: 1.77px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+    }
+    .blogo-popular-data {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bogo-price {
+      display: flex;
+      flex-direction: column;
+      .new-price {
+        color: #000;
+        font-family: Inter;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 14.46px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+      .old-price {
+        color: gray;
+
+        text-align: left;
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 10px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-decoration: line-through;
+      }
+    }
+
+    .variant-section {
+      margin-top: 10px;
+      text-align: left;
+
+      .variant {
+        display: flex;
+        margin-left: 25.77px;
+        margin-bottom: 7.23px;
+        align-items: flex-end;
+        .variant-drop {
+          display: flex;
+          flex-direction: column;
+          span {
+            margin-left: 7.17px;
+            font-family: Inter;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 9.94px;
+
+            line-height: 100%;
+            letter-spacing: 0%;
+          }
+        }
+        label {
+          font-family: Inter;
+          font-weight: 400;
+          font-style: Regular;
+          font-size: 9.04px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          color: #000000;
+          width: 10px;
+          height: 11px;
+        }
+
+        select {
+          margin-left: 7.17px;
+          padding: 3px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          width: 65.97763061523438px;
+          height: 25.3px;
+          top: 296.59px;
+          left: 125.23px;
+
+          opacity: 1;
+          border-width: 0.9px;
+          border-radius: 1.81px;
+        }
+      }
+    }
+
+    &.popular {
+      .popular-tag {
+        position: absolute;
+        top: -3px;
+        right: 5px;
+        background: $bogo-pink;
+        color: #fff;
+        font-size: 10px;
+        padding: 3px 6px;
+        border-radius: 0 0 4px 4px;
+        font-weight: bold;
+      }
+    }
+  }
+  .bogo-option.popular {
+    .bogo-card {
+      display: flex;
+      justify-content: unset;
+      flex-direction: column;
+    }
+  }
+  .delivery-price {
+    display: flex;
+    justify-content: space-between;
+    .free-delivery {
+      color: rgba(255, 107, 130, 1);
+      margin: 0;
+      text-align: left;
+      font-family: Inter;
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+
+    .total {
+      text-align: right;
+      margin: 0;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 14px;
+
+      line-height: 100%;
+      letter-spacing: 0%;
+
+      .total-price {
+        font-family: Inter;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+    }
+  }
+
+  .add-cart-btn {
+    background: $bogo-pink;
+    color: #fff;
+    border: none;
+
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+
+    height: 40px;
+
+    border-radius: 4px;
+    padding: 10px;
+    gap: 8px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .footer {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 12px;
+    line-height: 100%;
+    color: rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: flex-end;
+
+    height: 15px;
+  }
+}
