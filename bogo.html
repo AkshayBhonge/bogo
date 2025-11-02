@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     
+    <title>YAY! It's BOGO</title>
+    <link rel="stylesheet" href="bogo.css" />
+  </head>
+  <body>
+    <div class="bogo-container">
+      <h2>YAY! It’s BOGO</h2>
+      <label class="bogo-option">
+        <div class="bogo-card">
+          <div class="bogo-details">
+            <div class="bogo-details-data">
+              <div class="bogo-details-offer">
+                <strong>1 Unit</strong>
+                <span class="offer-badge">10% Off</span>
+              </div>
+              <p>Standard Price</p>
+            </div>
+            <input type="radio" name="unit" value="1" checked />
+          </div>
+          <div class="bogo-price">
+            <span class="new-price">$10.00 USD</span>
+            <span class="old-price">$24.00 USD</span>
+          </div>
+        </div>
+      </label>
+
+      <!-- 2 Unit -->
+      <label class="bogo-option popular">
+        <div class="bogo-card">
+          <div class="popular-tag">MOST POPULAR</div>
+          <div class="blogo-popular-data">
+            <div class="bogo-details">
+              <div class="bogo-details-data">
+                <div class="bogo-details-offer">
+                  <strong>2 Unit</strong>
+                  <div class="offer-badge">20% Off</div>
+                </div>
+              </div>
+              <input type="radio" name="unit" value="2" />
+            </div>
+            <div class="bogo-price">
+              <span class="new-price">$18.00 USD</span>
+              <span class="old-price">$24.00 USD</span>
+            </div>
+          </div>
+          <div class="variant-section">
+            <div class="variant">
+              <label>#1</label>
+              <div class="variant-drop">
+                <span>Size</span>
+                <select>
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                </select>
+              </div>
+              <div class="variant-drop">
+                <span>Colour</span>
+                <select>
+                  <option>Black</option>
+                  <option>White</option>
+                  <option>Red</option>
+                </select>
+              </div>
+            </div>
+            <div class="variant">
+              <label>#2</label>
+
+              <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+
+              <select>
+                <option>Colour</option>
+                <option>Black</option>
+                <option>White</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </label>
+
+      <!-- 3 Unit -->
+      <label class="bogo-option">
+        <div class="bogo-card">
+          <div class="bogo-details">
+            <div class="bogo-details-data">
+              <strong>3 Unit</strong>
+              <div class="offer-badge">30% Off</div>
+            </div>
+            <input type="radio" name="unit" value="3" />
+          </div>
+          <div class="bogo-price">
+            <span class="new-price">$24.00 USD</span>
+            <span class="old-price">$24.00 USD</span>
+          </div>
+        </div>
+      </label>
+      <div class="delivery-price">
+        <p class="free-delivery">Free Delivery</p>
+        <p class="total">Total: <span id="total-price">$18.00 USD</span></p>
+      </div>
+
+      <button class="add-cart-btn">+ Add to Cart</button>
+      <p class="footer">@ Powered by Pumper</p>
+    </div>
+
+    <script>
+      const options = document.querySelectorAll('input[name="unit"]');
+      const totalPrice = document.getElementById("total-price");
+
+      options.forEach(function (option) {
+        option.addEventListener("change", function (e) {
+          const value = e.target.value;
+          let price = 0;
+
+          if (value === "1") {
+            price = 10;
+          } else if (value === "2") {
+            price = 18;
+          } else if (value === "3") {
+            price = 24;
+          }
+
+          totalPrice.textContent = "$" + price.toFixed(2) + " USD";
+        });
+      });
+    </script>
+  </body>
+</html>
